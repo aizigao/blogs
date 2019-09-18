@@ -6,12 +6,10 @@ tags:
 
 **本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz//)**
 
-# 本地配置 https 及设备导入证书
-
 ## 背景
 
-平时开发时需要本地试下 https 的功能，否则正式上线时，http 和 https 会一定的跨域风险；
-如果突然想要使用正式环境的 https 的接口，配置一下 https 也是少不了的.
+平时开发时可能需要本地试下 https 的功能，要不正式上线时，http 和 https 会有一定的跨域的风险；
+如果突然想要使用正式环境的 https 的接口，配置一下 https 也是少不了的
 
 ## 方案
 
@@ -52,14 +50,14 @@ server {
 
 mac 双击打开 server.crt，然后在钥匙串里选择 aways trust
 
-![验证证书](https://aizigao-blog-1257747336.cos.ap-shanghai.myqcloud.com/20190918212146.png)
+![mac下导入证书](https://aizigao-blog-1257747336.cos.ap-shanghai.myqcloud.com/20190918212146.png)
 
 ### 4. ios 下导入证书
 
 手机域名绑定啥的我的用 charles 代理过去的
 
 ios 导入证书只能通入自带的 safari,邮箱可能也可以，我没有试过。我的做法
-只在 server.crt 文件夹内起个服务器,这里我用的是 http-server，没有的会按下面安装
+在 server.crt 文件夹内起个服务器,这里我用的是 npm 的 http-server，没有的就按下面的方式安装一下
 
 ```shell
 npm i -g http-server
@@ -75,7 +73,7 @@ ios 下载完成后，弹出弹窗
 
 然后进入`设置->通用->关于本机->证书信任设置`安装描述文件
 
-### 4. 安卓下导入证书
+### 5. 安卓下导入证书
 
 ### 6. 清除 https
 
@@ -87,6 +85,6 @@ ios 下载完成后，弹出弹窗
   - first.test.com
   - test.com
 
-### 手机
+#### 手机
 
 _手机中清除 https 比较麻烦，能用隐私模式就用隐私模式吧, 有通用方案的同学请告知_
