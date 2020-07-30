@@ -62,10 +62,10 @@ show_last_updated: true
 share: true
 
 # 是否开启打赏，关闭 reward: false
-reward:
-  title: 谢谢大爷~
-  wechat: /img/wechat.jpg     #微信，关闭设为 false
-  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+reward: false
+  # title: 谢谢大爷~
+  # wechat: /img/wechat.jpg     #微信，关闭设为 false
+  # alipay: /img/alipay.jpg     #支付宝，关闭设为 false
 
 # 是否开启搜索
 search: true
@@ -117,11 +117,12 @@ gitment: false
 #   client_secret:
 
 # use gitalk://github.com/gitalk/gitalk
-gitalk: false
-#  owner: 
-#  repo: 
-#  client_id: 
-#  client_secret: 
+gitalk:
+  owner: aizigao
+  repo: aizigao.github.io
+  enable: true
+  client_id: 152de6ae30b2f77001c6
+  client_secret: d01f43bb91c75d9d134e87d89bad7fdb43eb1323
 
 # Valine Comment system. https://valine.js.org
 valine:
