@@ -139,7 +139,7 @@ if __name__ == "__main__":
 python3 ./icon_symbol_to_svg http://at.alicdn.com/t/font_1760743_cqc31zkvkvd.js
 ```
 
-结果为:
+然后你在dist文件下你可以看到所有的svg了
 
 
 
