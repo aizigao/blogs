@@ -1,6 +1,6 @@
 ---
 title: 在iconfont上字体链接中获取图标svg文件(python)
-date: 2020-04-23 21:08:14
+date: 2020-07-23 21:08:14
 tags: 
    - 脚本 
    - python
@@ -148,4 +148,4 @@ python3 ./icon_symbol_to_svg http://at.alicdn.com/t/font_1760743_cqc31zkvkvd.js
 - 写了脚本后方便了很多，细节就不考虑了，能用就行;
 - python脚本简简写写还是比node方便一点，爽;
 
-**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz//)**
+**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2020/04/23/在iconfont上字体链接中获取图标svg文件)**
