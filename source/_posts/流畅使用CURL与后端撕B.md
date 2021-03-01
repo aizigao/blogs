@@ -8,8 +8,8 @@ tags:
 
 ## 什么是 CURL
 
-curl，全称 CommandLine URL 或 CommandLine Uniform Resource Locator，顾名思义，curl 命令是在命令行方式下工作，利用 URL 的语法进行数据的传输或者文件的传输。
-这个命令行工具现在多用于 Unix 和 Linux 操作系统，是一个开源的工具，功能十分强大。
+curl，全称 CommandLine URL 或 CommandLine Uniform Resource Locator， `curl` 是在命令行方式下工作，利用 URL 的语法进行数据的传输或者文件的传输, 你就单纯把它当成一个能在终端里发送完整的请求的方式就好了。 这个命令行工具在 Unix 和 Linux 操作系统下都自带，是一个开源的工具，功能十分强大, window下可以装上 `git-bash` 也会有，约等于大家电脑里都有。
+
 下面是 curl 的官方网站，我们可以该网站获取该工具的最新版本，还有最全面的使用方法。
 我们复制出一个 CURL 请求（csdn 的一个接口）
 
@@ -32,3 +32,7 @@ curl 'https://msg.csdn.net/v1/chrome/notification/view' -X OPTIONS -H 'Access-Co
 ![](https://i.loli.net/2019/08/02/5d43da6b53c9a98298.png)
 
 ![](https://i.loli.net/2019/08/02/5d43dbaf1a25d53570.png)
+
+## 后记
+
+后续可以也可以再多了解一下 `curl` 的格式，这个东西其实可以做很多事情，大体上可以代替 `postman`　的大部分功能了，比如文件上传什么的；在终端上用，之后写个脚本啥的也会比较方便。

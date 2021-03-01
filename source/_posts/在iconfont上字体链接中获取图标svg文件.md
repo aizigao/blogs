@@ -15,7 +15,7 @@ tags:
 
 **打开iconfont.cn,　我建了一个测试项目,里面两个图标**
 
-![testRepo](https://imgur.com/Pr2U30k.png)
+![iconfont 项目截图](https://i.loli.net/2021/03/01/VAT83zxRdBM6Es5.png)
 
 可以看到它提供了三个文件格式
 - Unicode
@@ -36,15 +36,15 @@ tags:
 //at.alicdn.com/t/font_1760743_cqc31zkvkvd.css
 ```
 
-- symbols　格式
+- `symbols` 格式
 
 ```
 //at.alicdn.com/t/font_1760743_cqc31zkvkvd.js
 ```
 
-从上面看，每个项目的唯一值是`1760743_cqc31zkvkvd`，只有获取这个字段就可以下载到对应的, Unicode下的ttf/woff之类的字体，fontcss的css文件及 symbols,　我这次的目标是导出svg,　感觉symbols格式是最简单的. 如上面的例子中，对应的symbols内容对应的js文件
+从上面看，每个项目都有唯一值是 `1760743_cqc31zkvkvd `，只有获取这个字段就可以下载到对应的, Unicode下的ttf/woff之类的字体，fontcss的css文件及 symbols,　我这次的目标是导出svg,　感觉symbols格式是最简单的。 如上面的例子中，对应的symbols内容对应的js文件
 
-![symbols](https://imgur.com/g8kyXWi.png)
+![js 里的内容](https://i.loli.net/2021/03/01/UcCo4Iq2DH9Pk3Q.png)
 
 可以看到`el='<svg=....>'`里的就是我们需要的svg, 复制格式化一下,内容为一个svg文件，内部有两个symbol
 ```html
@@ -80,7 +80,8 @@ symbol转为svg,其它只要替换`symbol`为`svg` 就好了，再删除原来�
 ></path>
 </svg>
 ```
-之后就是将svg取出，写入对应文件里就好了，文件名为`id`值,这一块可以写一个脚本处理
+
+之后就是将svg取出，取到每个svg的`id`属性做为文件名写入对应文件里就好了，这一块可以写一个脚本处理。
 
 ## 简化流程
 
@@ -127,7 +128,7 @@ def get_svgs_from_js_link(fileLink):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print('使用方式\n python3 ./icon_symbol_to_svg http://at.alicdn.com/t/font_1760743_cqc31zkvkvd.js')
+        print('使用方式如: \n python3 ./icon_symbol_to_svg http://at.alicdn.com/t/font_1760743_cqc31zkvkvd.js')
     else:
         get_svgs_from_js_link(sys.argv[1])
 
@@ -146,6 +147,6 @@ python3 ./icon_symbol_to_svg http://at.alicdn.com/t/font_1760743_cqc31zkvkvd.js
 ## 后记
 
 - 写了脚本后方便了很多，细节就不考虑了，能用就行;
-- python脚本简简写写还是比node方便一点，爽;
+- python脚本简简写写还是比node方便一点,　不带node_module走比较方便，下次试试deno版本的。
 
-**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2020/04/23/在iconfont上字体链接中获取图标svg文件)**
+**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2020/07/23/在iconfont上字体链接中获取图标svg文件)**

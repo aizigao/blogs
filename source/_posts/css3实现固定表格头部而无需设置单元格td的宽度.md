@@ -23,7 +23,7 @@ tags: css3
 
 ![](https://aizigao-blog-1257747336.cos.ap-shanghai.myqcloud.com/table-thead-fixed-2.jpg)
 
-  ![](http://pic1.win4000.com/pic/9/16/5be1844713.jpg)
+![](http://pic1.win4000.com/pic/9/16/5be1844713.jpg)
 
 ​:expressionless::expressionless::expressionless::expressionless: 我可不要**固定单元格宽度**，固定的宽度怎么做组作啊。。。
 

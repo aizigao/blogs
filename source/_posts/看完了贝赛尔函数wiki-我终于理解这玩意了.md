@@ -14,9 +14,9 @@ tags:
 
 我们打开 [贝赛尔函数wiki](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), 可以看到一堆的动图, 如下我copy了一份作为记录：
 
-![Imgur](https://imgur.com/ClE17q6.gif)
-![Imgur](https://imgur.com/fArQ8Lw.gif)
-![Imgur](https://imgur.com/4x1BILZ.gif)
+![Bézier_1_big.gif](https://i.loli.net/2021/03/01/w6suVraLZhSYPXE.gif)
+![Bézier_2_big.gif](https://i.loli.net/2021/03/01/gi69EbO4jU7LRh1.gif)
+![Bézier_3_big.gif](https://i.loli.net/2021/03/01/6q21fPLMx7bzSrR.gif)
 
 从上面的图，我们可以有所感觉了，原来这几个控制写的是点移动的趋势啊， 瞬间感觉还是wiki好使，但仅仅限于英文 wiki, 之前看中文的 wiki 就没有这些内容了。然后对wiki上的具体实现公式我就懒得看了，我只要知道这个控制点是啥意思就够了，存下这几张图足够使用了, 具体还是看看 wiki 。
 
