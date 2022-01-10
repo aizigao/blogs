@@ -29,8 +29,11 @@ openssl req \
     -config <(cat /System/Library/OpenSSL/openssl.cnf \
         <(printf '[SAN]\nsubjectAltName=DNS:m.test.com')) \ #写入你的域名
     -sha256 \
-    -days 3650 #有效期一个月
+    -days 365 #有效期一个365, 只有小于365才能在android上生效
 ```
+
+
+> android 高版本后只有系统级证书会生效，见 https://blog.nviso.eu/2020/11/19/proxying-android-app-traffic-common-issues-checklist/
 
 ### 2. 导入 nginx, ssl 是 443 端口，需要导入
 
