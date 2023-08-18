@@ -1,19 +1,16 @@
-const request = require("request");
 const axios = require('axios')
 const fs = require("fs");
 const path = require("path");
-const url = require("url");
 const xmlParser = require("xml-parser");
-const cheerio = require("cheerio");
-
+const crypto = require('crypto')
+const ppp = require('./ppppp')
 
 // 根据自己的情况进行配置
 const config = {
   username: "aizigao", // GitHub 用户名
-  token: "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", // GitHub Token
+  token: ppp.token, // GitHub Token
   repo: "blogs", // 存放 issues的git仓库
   sitemapUrl: path.resolve(__dirname, "./public/sitemap.xml"),
-  blogSite: `http://aizigao.xyz`
 };
 
 axios.defaults.headers = {
@@ -24,23 +21,27 @@ axios.defaults.headers = {
 }
 
 axios.interceptors.request.use((config) => {
-  console.log({ config })
   return config
 })
 
 let issuesUrl = `https://api.github.com/repos/${config.username}/${config.repo}/issues`;
 
 
+const delay = (ms) => new Promise(res => setTimeout(res, ms))
 /**
  * 获取本地的文件名
  */
 const getLocalArticleNames = () => {
   const urls = sitemapXmlReader(config.sitemapUrl);
-  const reg = new RegExp(`https?://aizigao.xyz/\\d+/\\d+/\\d+/(.*)?/`)
+  const reg = new RegExp(`https?://aizigao.xyz/(\\d+/\\d+/\\d+)/(.*)?/`)
   const urlNames = urls.map(i => {
     const matched = i.match(reg)
     if (matched) {
-      return decodeURIComponent(matched[1])
+      return {
+        label: genLabelMd("/" + matched[1] + '/' + matched[2] + '/'),
+        url: decodeURI(i)
+        , name: decodeURIComponent(matched[2])
+      }
     }
     return null
   }).filter(i => !!i)
@@ -59,6 +60,10 @@ function sitemapXmlReader(file) {
   });
 }
 
+const genLabelMd = (pathLabel) => {
+  return crypto.createHash('md5').update(pathLabel, 'utf-8').digest('hex');
+}
+
 const main = async () => {
   const remoteIssuesRes = await axios.get(issuesUrl)
   const remoteIssuesNames = remoteIssuesRes.data.map(i => i.title)
@@ -68,21 +73,25 @@ const main = async () => {
   const remoteIssuesNameSet = new Set(remoteIssuesNames)
 
   const notCreateIssues = localIssueNames.filter(i => {
-    return !remoteIssuesNameSet.has(i)
+    return !remoteIssuesNameSet.has(i.name)
   })
-  console.log('未创建的issue', notCreateIssues)
+  // console.log('未创建的issue', notCreateIssues)
   for (let issueName of notCreateIssues) {
-    axios.post(issuesUrl, {
-      title: notCreateIssues[0],
-      body: "## 欢迎讨论与交流",
+    await axios.post(issuesUrl, {
+      title: issueName.name,
+      body: `
+## 欢迎讨论与交流
+博客地址：[${issueName.url}](${issueName.url})
+      `,
       assignees: [],
-      "labels": ["GITALK"]
+      "labels": ["GITALK", issueName.label]
     }).then(() => {
-      console.log(`[创建issue] ${issueName}`)
+      console.log(`[创建issue] ${issueName.name}`)
     })
       .catch(e => {
         console.log(e.code, e.massage, e.response.data)
       })
+    await delay(2000)
   }
 }
 

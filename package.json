@@ -6,6 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "one": "npm run build && npm run deploy && node ./initialize.js",
     "server": "hexo server"
   },
   "hexo": {
