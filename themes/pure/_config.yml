@@ -133,13 +133,15 @@ comment:
     lazy: false
   gitalk: # gitalk. https://gitalk.github.io/
     owner: aizigao  #必须. GitHub repository 所有者，可以是个人或者组织。
-    admin: aizigao #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+    admin: ['aizigao'] #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
     repo: blogs  #必须. GitHub repository.
-    ClientID: 4cac290eb73e020734d9 #必须. GitHub Application Client ID.
-    ClientSecret: 15d05cb15f2d47d348ed158011a5625b2c4d30a2 #必须. GitHub Application Client Secret.
+    #必须. GitHub Application Client ID.
+    ClientID: 1bdfd98f39135777a2f8
+    #必须. GitHub Application Client Secret.
+    ClientSecret: 3d0ba2042c6f74583bd1e8c39f614b4b7eaaef76
     enableHotKey: true
     language: zh-CN
-    
+    proxy: https://cors.weixiangzhe.workers.dev/https://github.com/login/oauth/access_token
   valine: # Valine. https://valine.js.org
     appid:  # your leancloud application appid
     appkey:  # your leancloud application appkey
