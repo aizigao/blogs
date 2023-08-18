@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   hexo: ^6.3.0
+  hexo-deployer-git: ^4.0.0
   hexo-generator-archive: ^2.0.0
   hexo-generator-category: ^2.0.0
   hexo-generator-feed: ^3.0.0
@@ -17,6 +18,7 @@ specifiers:
 
 dependencies:
   hexo: registry.npmmirror.com/hexo/6.3.0
+  hexo-deployer-git: registry.npmmirror.com/hexo-deployer-git/4.0.0
   hexo-generator-archive: registry.npmmirror.com/hexo-generator-archive/2.0.0
   hexo-generator-category: registry.npmmirror.com/hexo-generator-category/2.0.0
   hexo-generator-feed: registry.npmmirror.com/hexo-generator-feed/3.0.0
@@ -783,6 +785,22 @@ packages:
       tildify: registry.npmmirror.com/tildify/2.0.0
     dev: false
 
+  registry.npmmirror.com/hexo-deployer-git/4.0.0:
+    resolution: {integrity: sha512-28t1Q+4taB/UaBAP52W3mD/wcCwa2y2zBieUfBJFBZudbmVgiKJB5YedYILeyI5QByaUKAOwoupmdTbocdQ+CQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/hexo-deployer-git/-/hexo-deployer-git-4.0.0.tgz}
+    name: hexo-deployer-git
+    version: 4.0.0
+    engines: {node: '>=14'}
+    dependencies:
+      bluebird: registry.npmmirror.com/bluebird/3.7.2
+      hexo-fs: registry.npmmirror.com/hexo-fs/4.1.1
+      hexo-util: registry.npmmirror.com/hexo-util/2.7.0
+      luxon: registry.npmmirror.com/luxon/3.4.0
+      nunjucks: registry.npmmirror.com/nunjucks/3.2.4
+      picocolors: registry.npmmirror.com/picocolors/1.0.0
+    transitivePeerDependencies:
+      - chokidar
+    dev: false
+
   registry.npmmirror.com/hexo-front-matter/3.0.0:
     resolution: {integrity: sha512-hSQTPUmB/BCe1BFYmXRkPyLk8rqbBqHCQq+rjwwOJuEfOADrFaVK2VPZb90tJzPyXE1xSxpgCxE/AZq0CyTVwg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/hexo-front-matter/-/hexo-front-matter-3.0.0.tgz}
     name: hexo-front-matter
@@ -1316,6 +1334,13 @@ packages:
     version: 2.0.2
     dependencies:
       tslib: registry.npmmirror.com/tslib/2.6.1
+    dev: false
+
+  registry.npmmirror.com/luxon/3.4.0:
+    resolution: {integrity: sha512-7eDo4Pt7aGhoCheGFIuq4Xa2fJm4ZpmldpGhjTYBNUYNCN6TIEP6v7chwwwt3KRp7YR+rghbfvjyo3V5y9hgBw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/luxon/-/luxon-3.4.0.tgz}
+    name: luxon
+    version: 3.4.0
+    engines: {node: '>=12'}
     dev: false
 
   registry.npmmirror.com/marked/4.3.0:
