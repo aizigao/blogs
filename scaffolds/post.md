@@ -3,7 +3,7 @@ title: {{ title }}
 date: {{ date }}
 tags:
 ---
-[TOC]
+@[TOC]
 
 ## 前言
 

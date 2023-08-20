@@ -4,7 +4,7 @@ date: 2017-04-18 15:02:56
 tags: others
 ---
 
-[TOC]
+@[TOC]
 
 <!-- toc -->
 
