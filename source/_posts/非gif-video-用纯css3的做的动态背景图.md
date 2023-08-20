@@ -1,10 +1,9 @@
 ---
 title: ' 非gif/video,用纯css3的做的动态背景图'
 date: 2017-03-08 09:37:11
-tags: css3
+tags: css
 ---
 
-**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2017/03/08/%E9%9D%9Egif-video-%E7%94%A8%E7%BA%AFcss3%E7%9A%84%E5%81%9A%E7%9A%84%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF%E5%9B%BE/)**
 
 <!-- toc -->
 

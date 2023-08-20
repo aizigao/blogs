@@ -2,7 +2,7 @@
 title: JS中枚举类型个人处理方式(BraketEnum)
 date: 2020-06-03 20:56:08
 tags:
- - js
+ - web 前端
 ---
 
 ## 背景
@@ -247,5 +247,3 @@ myEnums.of([])
 - `toFormValueEnum` 转为antd pro table 需要的ValueEnum
 
 
-
-**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2020/06/03/JS中枚举类型个人处理方式)**

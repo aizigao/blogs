@@ -205,7 +205,7 @@ profile:
   avatar: /images/avatar.jpeg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
   author: aizigao
-  author_title: Enough theory, seeing it in action probably explains more than carefully reading the above stuff.
+  author_title: Enough theory
   # author_description: 个人简介。
   # location: Shenzhen, China
   follow: https://github.com/aizigao

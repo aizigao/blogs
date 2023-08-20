@@ -4,7 +4,6 @@ date: 2017-03-07 12:58:48
 tags: others
 ---
 
-**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2017/03/07/黑苹果10-12-voodooPS2Controller-改caps为ctrl/)**
 
 <!-- toc -->
 

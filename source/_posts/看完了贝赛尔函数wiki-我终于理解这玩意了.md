@@ -30,4 +30,3 @@ TODO: 之后有时间再试试
 
 - [Bézier_curve](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)
 
-**本博客持续修改与更新中，[点击这里查看最新的内容](http://aizigao.xyz/2020/04/23/看完了贝赛尔函数wiki-我终于理解这玩意了/)**
