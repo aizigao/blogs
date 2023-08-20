@@ -1,0 +1,8 @@
+{
+  "pasteImage.path": "${projectRoot}/source/images/postimgs",
+  "pasteImage.basePath": "${projectRoot}/source",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.namePrefix": "${currentFileNameWithoutExt}__",
+  "pasteImage.prefix": "/",
+  "pasteImage.insertPattern": "![${currentFileNameWithoutExt}](${imageFilePath})",
+}
