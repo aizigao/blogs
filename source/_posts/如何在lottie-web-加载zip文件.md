@@ -144,7 +144,7 @@ loadZipAnimation(remoteZipFile);
 
 用 `.` 开头的隐藏文件和文件架是不用处理, 关键的是 json 文件, 可以看到的是 `u` 是文件目录, `p` 是文件名
 
-![如何在lottie-web-加载zip文件](/images/postimgs/如何在lottie-web-加载zip文件__2023-08-20-22-08-46.png)
+![如何在lottie-web-加载zip文件](/images/postimgs/如何在lottie-web-加载zip文件__2023-08-20-22-08-46.png =200x200)
 
 4. 现在的目标就是替换 p 的内容为 线上的地址，然后加载 json 就可以了
 5. 线上的地址可以直接用 `URL.createObjectURL` 生产一个临时的，可以生产一个临时的 `blob:<location>/<uuid>` 的地址，页面关闭后会立即销毁

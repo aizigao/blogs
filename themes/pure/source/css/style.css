@@ -8826,15 +8826,17 @@ body.okayNav-loaded {
   }
 
   .header .search {
-    width: 90%;
+    width: 60%;
     float: right;
   }
 
   .header .profile-block {
     padding: 0;
     margin: 10px 0;
-    width: 8.33333%;
+    width: 30%;
     float: left;
+    display: flex;
+    align-items: center;
   }
 
   .header #avatar {
@@ -8842,7 +8844,10 @@ body.okayNav-loaded {
     height: 32px;
   }
 
-  .header #name,
+  .header #name{
+    margin-top: 0;
+    margin-left: 8px;
+  }
   .header #title,
   .header #location {
     display: none;
