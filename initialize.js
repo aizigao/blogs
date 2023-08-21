@@ -65,7 +65,12 @@ const genLabelMd = (pathLabel) => {
 }
 
 const main = async () => {
-  const remoteIssuesRes = await axios.get(issuesUrl)
+  const remoteIssuesRes = await axios.get(issuesUrl, {
+    params: {
+      page: 1,
+      per_page: 9999,
+    },
+  })
   const remoteIssuesNames = remoteIssuesRes.data.map(i => i.title)
   const localIssueNames = getLocalArticleNames()
   console.log('线上issue数', remoteIssuesNames.length)
