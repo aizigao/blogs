@@ -20,6 +20,7 @@ specifiers:
   hexo-server: ^3.0.0
   hexo-theme-landscape: ^1.0.0
   hexo-wordcount: ^6.0.1
+  markdown-it-textual-uml: ^0.13.0
   request: ^2.88.2
   xml-parser: ^1.2.1
 
@@ -43,6 +44,7 @@ dependencies:
   hexo-server: registry.npmmirror.com/hexo-server/3.0.0
   hexo-theme-landscape: registry.npmmirror.com/hexo-theme-landscape/1.0.0
   hexo-wordcount: registry.npmmirror.com/hexo-wordcount/6.0.1
+  markdown-it-textual-uml: registry.npmmirror.com/markdown-it-textual-uml/0.13.0
   request: registry.npmmirror.com/request/2.88.2
   xml-parser: registry.npmmirror.com/xml-parser/1.2.1
 
@@ -1595,6 +1597,12 @@ packages:
     resolution: {integrity: sha512-E32m0nV9iyhRR7CrhnzL5msqic7rL1juWre6TQNxsnApg7Uf+F97JOKxUijg5YwXz86lZ0mqfOnutoryyNdntQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-sup/-/markdown-it-sup-1.0.0.tgz}
     name: markdown-it-sup
     version: 1.0.0
+    dev: false
+
+  registry.npmmirror.com/markdown-it-textual-uml/0.13.0:
+    resolution: {integrity: sha512-m7lTSgYE3sxSbsYcyCurTLZtw/yMaXj2STSpJ6AanV1cIMeLVqvl1wDRwNLxCaol2LsYFFtLmzQ6N6i2k7sSGQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-textual-uml/-/markdown-it-textual-uml-0.13.0.tgz}
+    name: markdown-it-textual-uml
+    version: 0.13.0
     dev: false
 
   registry.npmmirror.com/markdown-it-toc/1.1.0:

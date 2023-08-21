@@ -4,7 +4,7 @@
 
 # Site
 title: 矮子高-博客
-subtitle: '个人博客'
+subtitle: "个人博客"
 keywords:
 description: 前端,js,html,css3,数字图像处理,angular,typescript,开发,程序员
 author: 矮子高
@@ -37,7 +37,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -47,21 +47,21 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -81,7 +81,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -108,11 +108,24 @@ deploy:
   repo: git@github.com:aizigao/aizigao.github.io.git
   branch: master
 
-
 sitemap:
-  path: 
+  path:
     - sitemap.xml
     - sitemap.txt
   rel: false
   tags: true
   categories: true
+
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer:
+  # quotes: ""''
+  plugins:
+    - plugin:
+        name: markdown-it-textual-uml
+        enable: true
