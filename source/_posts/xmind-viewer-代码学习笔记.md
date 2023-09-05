@@ -9,6 +9,9 @@ tags:
 
 TODO: 待整理
 
+标准的 MVC 模式
+
+![xmind-viewer-代码学习笔记](/images/postimgs/xmind-viewer-代码学习笔记__2023-08-23-11-10-28.png)
 
 **usage**
 
@@ -52,7 +55,6 @@ new JSZip().loadAsync(zipFile).then((zip) => {
 interface RenderOptions{
 sheetIndex: number
 }
-' skinparam handwritten true
 class SnowbrushRenderer{ - \_data:SheetData[] // 数据 - \_sheetViewController: SheetViewController
 constructor(data:SheetData):void
 ' ---------- + render(options: RenderOptions): Canvas + get svg():Svg + get bounds():void + transform(x:number,y:number):{x:number,y:number}
@@ -486,4 +488,34 @@ test2.svg
 - xmind 文件结构 TODO:
 - 读取代码
 
-### 渲染 v
+
+### 点
+
+
+有错直接抛出
+src/pages/core/snowbrushRenderer.ts
+
+```ts
+export class SnowbrushRenderer {
+  private _data: SheetData[];
+  private _sheetViewController: SheetViewController;
+
+  constructor(data: SheetData[]) {
+    if (!data) {
+      throw new Error('Sheet data is required.');
+    }
+
+    if (data.length === 0) {
+      throw new Error('The sheet data should not be empty.');
+    }
+
+    this._data = data;
+  }
+}
+```
+
+
+### 渲染
+
+- render 流程
+
